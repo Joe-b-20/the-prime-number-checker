@@ -44,10 +44,13 @@ class colors: # You may need to change color settings in iPython
 
 def isPrime (num):
    num = abs (num) # Get abs (absolute) value
-   if (num <= 1):
+   if (num == 1): 
+        print ("it's Complecated)
+        return False
+   if (num < 1):
        print (colors.GREEN + "The number" , num , "is neither a prime number nor a composite number.\n" , colors.ENDC)
        return False # Return False if the number is not prime
-   for i in range (2, 2 + int(math.sqrt(num))):
+   for i in range (2, 1 + int(math.sqrt(num))):
        if (num % i) == 0:
            print (colors.GREEN + "The number",num,"is not a prime number...")
            print ("because",num,"divided by", i,"is" , num//i , "\n" , colors.ENDC)
